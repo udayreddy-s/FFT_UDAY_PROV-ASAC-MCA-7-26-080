@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0; 
+            box-sizing: border-box;
+            font-family: Calibri, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        form {
+            background-color: #ffffff;
+            width: 600px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 4px 8px 12px black;
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            color: #444444;
+        }
+
+        input {
+            width: 100%;
+            height: 38px;
+            padding: 8px 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .gender input {
+            width: auto;
+            height: auto;
+        }
+
+        .group {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            height: 40px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-bottom: 10px;
+        }
+
+        .submit {
+            background-color: #007bff;
+            color: white;
+        }
+        .submit:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);}
+
+        .reset {
+            background-color: #dc3545;
+            color: white;
+        }
+        .reset:hover {
+            background-color: #a71d2a;
+            transform: translateY(-1px);}
+    </style>
+</head>
+<body>
+
+    <form>
+        <h1><u>Student Registration Form</u></h1>
+
+        <label>Reg Id:</label>
+        <input type="number" placeholder="Enter Registration ID" required>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter Full Name" required>
+
+        <label>Gender:</label>
+        <div class="gender">
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </div>
+
+        <label>DOB:</label>
+        <input type="date">
+
+        <label>Email:</label>
+        <input type="email" placeholder="example@email.com">
+
+        <label>Mobile:</label>
+        <input type="number" placeholder="Enter Mobile Number">
+
+        <label>Department:</label>
+        <input type="text" placeholder="e.g. Computer Science">
+
+        <label>Course:</label>
+        <input type="text" placeholder="e.g. BCA / MCA">
+
+        <label>Section:</label>
+        <input type="text" placeholder="e.g. Section A">
+
+        <label>College:</label>
+        <input type="text" placeholder="Enter College Name">
+
+        <label>Address:</label>
+        <input type="text" placeholder="Enter Address">
+
+        <label>Resume:</label>
+        <input type="file">
+
+        <div class="group">
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
+    </form>
+
+</body>
+</html>

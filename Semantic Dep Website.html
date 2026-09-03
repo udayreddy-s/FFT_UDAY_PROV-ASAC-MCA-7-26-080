@@ -1,0 +1,422 @@
+<html>
+    <head>
+        <title>Semantic Dep Website</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #f9fbfb;
+                color: #333;
+                font-family: Calibri, sans-serif;
+                line-height: 1.6;
+            }
+            header {
+                background: rgb(107, 35, 35);
+            }
+            h1 {
+                text-align: center;
+                padding: 12px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-shadow: 2px 4px 8px black;
+                color: white;
+            }
+            nav {
+                display: flex;
+                justify-content: space-around;
+                font-weight: bold;
+                flex-wrap: wrap;
+            }
+            nav a {
+                color: azure;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                text-decoration: none;
+            }
+            nav a:hover {
+                color: #0d1b2a;
+            }
+            h2 {
+                text-align: center;
+                font-family: Trebuchet MS ;
+                color: rgb(231, 93, 43);
+                text-shadow: rgb(49, 47, 47);
+                margin-top: 20px;
+                font-size: 24px;
+            }
+            h3 {
+                text-align: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            section {
+                padding: 25px 40px;
+                border-bottom: 1px solid #ddd;
+            }
+            .intro-text {
+                margin-bottom: 20px;
+            }
+            img {
+                width: 200px;
+                height: 200px;
+                margin-top: 15px;
+                border-radius: 20px;
+                box-shadow: 4px 6px 12px rgb(54, 42, 42);
+                margin-inline: 65px;
+                object-fit: cover;
+            }
+            article {
+                margin-left: 50px;
+            }
+            .highlights {
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                margin-top: 10px;}
+
+            .highlights div {
+                width: 220px;}
+
+            .highlights img {
+                width: 160px;
+                height: 160px;
+                margin: 0;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 3px 4px 8px gray;}
+
+            .highlights p {
+                margin-top: 8px;
+                font-weight: bold;}
+            
+
+            .content-box {
+                padding: 10px 0;
+                margin: 5px 0;
+                
+            }
+            .content-box h4 {
+                color: rgb(71, 71, 232);
+                margin-bottom: 8px;
+            }
+            ul {
+                margin-left: 30px;
+                margin-top: 5px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+            table, th, td {
+                border: 1px solid #aaa;
+            }
+            th, td {
+                padding: 10px;
+                text-align: center;
+            }
+            th {
+                background-color: rgb(121, 160, 169);
+                color: white;
+            }
+            form {
+                max-width: 500px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            input, textarea {
+                padding: 10px;
+                border: 1px solid rgb(239, 215, 215);
+
+                font-size: 14px;
+                font-family: inherit;
+            }
+            button {
+                padding: 10px;
+                background-color: rgb(121, 160, 169);
+                color: white;
+                border: none;
+                font-weight: bold;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: rgb(90, 130, 140);
+            }
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: rgb(121, 160, 169);
+                color: white;
+                font-weight: bold;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Semantic Department Website</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About Department</a>
+                <a href="#faculty">Faculty</a>
+                <a href="#courses">Courses</a>
+                <a href="#timetable">Time Table</a>
+                <a href="#achievements">Achievement</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- 1. HOME SECTION -->
+        <section id="home">
+            <p class="intro-text"><b> Alliance University, Bangalore provides students with a good environment for learning and developing technical skills. The university has classrooms, laboratories, library facilities and experienced faculty.Students also get opportunities to participate in technical, cultural and extracurricular activities.</b></p>
+            <marquee><h2>Dear MCA Students, Welcome to 'Alliance University'</h2></marquee>
+            
+            <h3><u>Highlights</u></h3>
+            <article>
+                <div class="highlights">
+                    <div>
+                        <img src="./images (1).jpeg" alt="Cyber Security">
+                        <p>Cyber Security</p>
+                    </div>
+                
+                    <div>
+                        <img src="./FUqHEVVUsAAbZB0-1024x580.jpg" alt="Data Science">
+                        <p>Data Science</p>
+                    </div>
+                
+                    <div>
+                        <img src="./where-is-ai-used.jpg" alt="Artificial Intelligence">
+                        <p>Artificial Intelligence</p>
+                    </div>
+                
+                    <div>
+                        <img src="./images.jpeg" alt="Game Development">
+                        <p>Game Development</p>
+                    </div>
+                
+                </div>
+            </article>
+        </section>
+
+
+        <section id="about">
+            <h2>About Department</h2>
+            <article class="content-box">
+                <h4>Vision</h4>
+                <p>To provide quality education in computer applications and help students develop strong technical and professional skills.</p>
+            </article>
+            <article class="content-box">
+                <h4>Mission</h4>
+                <p>To impart quality technical education through balanced theoretical and practical learning, preparing students to solve complex industry problems.</p>
+            </article>
+            <article class="content-box">
+                <h4>Objectives</h4>
+                <ul>
+                    <li>Provide strong algorithmic, software design, and programming foundations.</li>
+                    <li>Promote industry interaction through workshops, internships, and live projects.</li>
+                    <li>Encourage multidisciplinary research in artificial intelligence, cloud, and data science.</li>
+                </ul>
+            </article>
+        </section>
+
+
+        <section id="faculty">
+            <h2>Faculty</h2>
+            <article class="content-box">
+                <h4>VEERA RAGHAVAIAH KATHULA</h4>
+                <p><strong>Designation:</strong> Professor</p>
+                <p><strong>Subject Handled:</strong> Front-End Frameworks and Technologies</p>
+            </article>
+            <article class="content-box">
+                <h4>DHARSHINEE NAGARAJAN</h4>
+                <p><strong>Designation:</strong> Professor</p>
+                <p><strong>Subject Handled:</strong> Communication and Life Skills - I</p>
+            </article>
+            <article class="content-box">
+                <h4>MR. ABHISHEK A</h4>
+                <p><strong>Designation:</strong> Professor</p>
+                <p><strong>Subject Handled:</strong> Advanced UI and UX Design for Developers</p>
+            </article>
+            <article class="content-box">
+                <h4>OLETI DURGA BRAVISH</h4>
+                <p><strong>Designation:</strong> Professor</p>
+                <p><strong>Subject Handled:</strong> Advanced Data Science Techniques</p>
+            </article>
+        </section>
+
+
+        <section id="courses">
+            <h2>Courses & Syllabus</h2>
+            <article class="content-box">
+                <h4>MCA Semester-wise Subjects</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Subject Code</th>
+                            <th>Subject Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Semester 1</td>
+                            <td>MCA101</td>
+                            <td>Data Structures and Algorithms</td>
+                        </tr>
+                        <tr>
+                            <td>Semester 2</td>
+                            <td>MCA102</td>
+                            <td>Operating Systems & Linux Lab</td>
+                        </tr>
+                        <tr>
+                            <td>Semester 3</td>
+                            <td>MCA201</td>
+                            <td>Database Management Systems</td>
+                        </tr>
+                        <tr>
+                            <td>Semester 4</td>
+                            <td>MCA202</td>
+                            <td>Object-Oriented Programming using Java</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section> 
+
+
+        <section id="timetable">
+            <h2>Class & Lab Timetable</h2>
+            <article class="content-box">
+                <h4>Weekly Class Timetable</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>1:00 PM - 2:00 PM</th>
+                            <th>2:00 PM - 3:00 PM</th>
+                            <th>3:00 PM - 4:00 PM</th>
+                            <th>4:00 PM - 5:00 PM</th>
+                            <th>5:00 PM - 6:00 PM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>AUI</td>
+                            <td>DST</td>
+                            <td>ADS</td>
+                            <td>BAD</td>
+                            <td>EFT</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>DST</td>
+                            <td>CLS</td>
+                            <td>ADS</td>
+                            <td>ADS</td>
+                            <td>PST</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>EFT</td>
+                            <td>PST</td>
+                            <td>DST</td>
+                            <td>AUI</td>
+                            <td>AUI</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>AUI</td>
+                            <td>BAD</td>
+                            <td>EFT</td>
+                            <td>CLS</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>PST</td>
+                            <td>ADS</td>
+                            <td>AUI</td>
+                            <td>EFT</td>
+                            <td>EFT</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </article>
+            <article class="content-box">
+                <h4>Lab Schedule</h4>
+                <ul>
+                    <li><strong>FFT Lab:</strong> Monday (2:00 PM - 4:00 PM) - Lab 1</li>
+                    <li><strong>PST Lab:</strong> Tuesday (2:00 PM - 4:00 PM) - Lab 2</li>
+                    <li><strong>AUI Lab:</strong> Thursday (10:00 AM - 12:00 PM) - Lab 1</li>
+                </ul>
+            </article>
+        </section>
+
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <article class="content-box">
+                <h4>Student Achievements</h4>
+                <p>Students participate in hackathons, coding competitions and various technical events conducted at university and inter-college levels.</p>
+            </article>
+            <article class="content-box">
+                <h4>Faculty Achievements</h4>
+                <p>Dr. Ramesh Kumar received the 'Best Researcher Award' for publishing high-impact papers in IEEE computer science journals.</p>
+            </article>
+            <article class="content-box">
+                <h4>Department Milestones</h4>
+                <p>  The department conducts technical workshops, seminars and student development activities throughout the academic year.</p>
+            </article>
+        </section>
+
+
+        <section id="events">
+            <h2>Events</h2>
+            <article class="content-box">
+                <h4>Workshops</h4>
+                <p><strong>Hands-on Docker & Kubernetes:</strong> A 2-day technical workshop conducted by industry experts on modern container tools.</p>
+            </article>
+            <article class="content-box">
+                <h4>Seminars</h4>
+                <p><strong>Future of Generative AI:</strong> Guest seminar delivered by senior software architects covering Large Language Models.</p>
+            </article>
+            <article class="content-box">
+                <h4>Hackathons</h4>
+                <p><strong>CodeCraft 2026:</strong> An internal 24-hour hackathon designed to test real-time coding and problem-solving abilities.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <article class="content-box">
+                <h4>Department Address</h4>
+                <p>Department of Computer Science & Applications, Alliance University, Chikkahagade Cross, Chandapura - Anekal Main Road, Bengaluru – 562106.</p>
+                <p style="margin-top: 8px;"><strong>Email:</strong> mca.dept@alliance.edu.in</p>
+                <p><strong>Phone:</strong> +91 80 4619 9000 / +91 98765 43210</p>
+            </article>
+
+            <article class="contact">
+                <h4>Contact Form</h4>
+                <form action="#" method="get">
+                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="text" placeholder="Enter Subject" required>
+                    <textarea rows="4" placeholder="Write your message here.." required></textarea>
+                    <button type="submit">Submit Message</button>
+                </form>
+            </article>
+        </section>
+            <footer>
+                 <p>&copy; 2026 Alliance University</p>
+            </footer>
+    </body>
+</html>

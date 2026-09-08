@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday</title>
+
+    <style>
+        body{
+            margin: 350px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(111, 223, 238);
+            font-family: Trebuchet MS;
+            overflow: hidden;
+        }
+
+        .card{
+            width: 480px;
+            padding: 40px 25px;
+            background: white;
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: 12px 14px 22px rgba(0,0,0,0.3);
+            animation: cardOpen 1.5s ease;
+        }
+
+        h1{
+            color: rgb(26, 205, 62);
+            font-size: 32px;
+            text-shadow: 2px 2px 8px pink;
+            animation: glow 1s infinite alternate;
+        }
+
+        .cake{
+            font-size: 100px;
+            margin: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .name{
+            color: purple;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        p{
+            color: #555;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .balloon{
+            position: absolute;
+            font-size: 60px;
+            animation: fly 6s infinite linear;
+        }
+
+        .balloon1{
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .balloon2{
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .balloon3{
+            right: 10%;
+            animation-delay: 1s;
+        }
+
+        .balloon4{
+            right: 25%;
+            animation-delay: 3s;
+        }
+        .balloon5{
+            right:5%;
+            animation-delay: 2s;
+        }
+        .balloon6{
+            right:85%;
+            animation-delay: 2s;
+        }
+
+        @keyframes cardOpen{
+            from{
+                transform: rotateY(90deg) scale(0.5);
+                opacity: 0;
+            }
+
+            to{
+                transform: rotateY(0deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce{
+            from{
+                transform: translateY(0);
+            }
+
+            to{
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fly{
+            from{
+                bottom: -100px;
+            }
+
+            to{
+                bottom: 110%;
+            }
+        }
+
+        .particle {
+            position: absolute;
+            top: -50px;
+            pointer-events: none;
+            user-select: none;
+            animation: fall linear infinite;
+        }
+
+        .star {
+            font-size: 26px;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+        }
+
+        .confetti {
+            width: 12px;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        .c-pink   { background: #ff2a7a; }
+        .c-gold   { background: #ffd700; }
+        .c-purple { background: #9b59b6; }
+        .c-green  { background: #2ecc71; }
+        .c-white  { background: #ffffff; }
+        .c-orange { background: #ff7675; }
+
+        .p1  { left: 5%;  animation-duration: 4.5s; animation-delay: 0s; }
+        .p2  { left: 14%; animation-duration: 5.5s; animation-delay: 1.2s; }
+        .p3  { left: 22%; animation-duration: 3.8s; animation-delay: 2.5s; }
+        .p4  { left: 32%; animation-duration: 6s;   animation-delay: 0.5s; }
+        .p5  { left: 42%; animation-duration: 4.2s; animation-delay: 3s; }
+        .p6  { left: 52%; animation-duration: 5s;   animation-delay: 1.8s; }
+        .p7  { left: 63%; animation-duration: 4.8s; animation-delay: 0.2s; }
+        .p8  { left: 74%; animation-duration: 6.2s; animation-delay: 2.8s; }
+        .p9  { left: 83%; animation-duration: 3.9s; animation-delay: 1s; }
+        .p10 { left: 92%; animation-duration: 5.2s; animation-delay: 2.2s; }
+        .p11 { left: 18%; animation-duration: 4.7s; animation-delay: 3.8s; }
+        .p12 { left: 78%; animation-duration: 5.8s; animation-delay: 4.1s; }
+
+        @keyframes fall {
+            0% {
+                top: -100px;
+                transform: translateX(0) rotate(0deg) rotateY(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(25px) rotate(180deg) rotateY(180deg);
+                opacity: 0.85;
+            }
+            100% {
+                top: 800px;
+                transform: translateX(-25px) rotate(360deg) rotateY(360deg);
+                opacity: 0.2;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="particle star p1">✨</div>
+    <div class="particle star p3">⭐</div>
+    <div class="particle star p6">🌟</div>
+    <div class="particle star p8">✨</div>
+    <div class="particle star p10">⭐</div>
+    <div class="particle star p12">✨</div>
+
+    <div class="particle confetti c-pink p2"></div>
+    <div class="particle confetti c-gold p4"></div>
+    <div class="particle confetti c-purple p5"></div>
+    <div class="particle confetti c-green p7"></div>
+    <div class="particle confetti c-white p9"></div>
+    <div class="particle confetti c-orange p11"></div>
+
+    <div class="card">
+
+        <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <div class="name">
+            Dear Best Friend ❤️
+        </div>
+
+        <p>
+            May your days be filled with endless laughter, boundless peace, and good health.
+            Here’s to celebrating the wonderful person you are and all the greatness ahead. 
+        </p>
+
+        <p>
+           <b> ✨ Have an Amazing Day! ✨</b>
+        </p>
+
+    </div>
+</body>
+</html>

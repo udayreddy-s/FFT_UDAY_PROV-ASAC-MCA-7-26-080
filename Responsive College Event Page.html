@@ -1,0 +1,295 @@
+<html>
+<head>
+    <title>College Event Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(36, 36, 36);
+            font-family: Calibri;
+            line-height: 1.6;
+        }
+        header {
+            background-color: rgb(10, 10, 10);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-family: 'Times New Roman';
+            text-shadow: 2px 2px 5px black;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(121, 160, 169);
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: rgb(90, 130, 140);
+        }
+        section {
+            padding: 30px 50px;
+            border-bottom: 2px solid rgb(233, 230, 230);
+        }
+        h2 {
+            text-align: center;
+            color: rgb(231, 93, 43);
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .banner {
+            width: 100%;
+            border-bottom: 4px solid rgb(231, 93, 43);
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+       
+        .highlights {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 4px 10px gray;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: white;
+        }
+        table, th, td {
+            border: 1px solid rgb(223, 211, 211);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: rgb(121, 160, 169);
+            color: white;
+        }
+        .speaker-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgb(121, 160, 169);
+            margin-bottom: 10px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 3px 4px 8px gray;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, select {
+            padding: 10px;
+            border: 1px solid rgb(0, 241, 0);
+            border-radius: 5px;
+            font-size: 15px;
+            width: 100%;
+        }
+        button {
+            padding: 12px;
+            background-color: rgb(231, 93, 43);
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(200, 70, 25);
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(15, 14, 14);
+            color: white;
+            font-weight: bold;
+        }
+       
+        @media (max-width: 768px) {
+            section {
+                padding: 20px 15px;
+            }
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                border-bottom: 1px solid rgb(28, 103, 115);
+            }
+            .speaker-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Alliance ONE: Solving for Bengaluru</h1>
+    </header>
+    <nav>
+        <a href="#about">About Event</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#register">Registration</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="banner">
+        <img src="./Alliance banner.jpg" alt="Alliance Event Banner">
+    </div>
+
+   
+    <section id="about">
+        <h2>Event Highlights</h2>
+        <div class="highlights">
+            <p>Welcome to <b>Alliance ONE</b> at Alliance University, Bengaluru! Join us on <b>October 29 for Schools</b> and <b>October 30-31 for Colleges</b> to solve global problems through local thinking.</p>
+            <ul style="margin-left: 30px; margin-top: 15px;">
+                <li>Interactive Sessions & Technology Showcases</li>
+                <li>Sports, Arts, and Cultural Highlights</li>
+                <li>Live Project Expo & Robotics Competitions</li>
+                <li>Exciting Cash Prizes & Certificates for all participants</li>
+            </ul>
+        </div>
+    </section>
+
+   
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Event Name</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM - 10:00 AM</td>
+                    <td>Inauguration</td>
+                    <td>Main Auditorium</td>
+                </tr>
+                <tr>
+                    <td>10:15 AM - 12:30 PM</td>
+                    <td>Workshops</td>
+                    <td>Lab 1 & 2</td>
+                </tr>
+                <tr>
+                    <td>01:30 PM - 03:00 PM</td>
+                    <td>Speaker Sessions</td>
+                    <td>Seminar Hall</td>
+                </tr>
+                <tr>
+                    <td>03:30 PM - 05:00 PM</td>
+                    <td>Prize Distribution</td>
+                    <td>Main Auditorium</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+   
+    <section id="speakers">
+        <h2>Guest Speakers</h2>
+        <div class="speaker-container">
+            <div class="card">
+                <img src="./images.jpeg" alt="Speaker 1">
+                <h4>Ramesh</h4>
+                <p>AI & Machine Learning Expert</p>
+            </div>
+            <div class="card">
+                <img src="./where-is-ai-used.jpg" alt="Speaker 2">
+                <h4>Suresh</h4>
+                <p>Senior Cloud Architect</p>
+            </div>
+            <div class="card">
+                <img src="./FUqHEVVUsAAbZB0-1024x580.jpg" alt="Speaker 3">
+                <h4>Kiran</h4>
+                <p>Cyber Security Analyst</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="register">
+        <h2>Student Registration Form</h2>
+        <form action="#" method="get">
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email Address:</label>
+            <input type="email" placeholder="example@email.com" required>
+
+            <label>Mobile Number:</label>
+            <input type="number" placeholder="Enter mobile number" required>
+            
+            <label>College Name:</label>
+            <input type="text" placeholder="Enter your institution name" required>
+
+            <button type="submit">Complete Registration</button>
+        </form>
+    </section>
+
+  
+    <section id="contact">
+        <h2>Venue & Contact Details</h2>
+        <div class="contact-info">
+            <p><strong>Venue:</strong> Alliance University Campus</p>
+            <p><strong>Address:</strong> Chikkahagade Cross, Chandapura - Anekal Main Road, Bengaluru – 562106</p>
+            <p style="margin-top: 15px;"><strong>Email:</strong> event@alliance.edu.in</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Alliance University </p>
+    </footer>
+</body>
+</html>

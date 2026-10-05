@@ -1,0 +1,318 @@
+<html>
+<head>
+    <title>Student Result Dashboard</title>
+    <style>
+        body {
+            font-family: Calibri;
+            background-color: rgb(41, 207, 41);
+            padding: 20px;
+        }
+        .main {
+            width: 850px;
+            margin: auto;
+            background-color: rgb(126, 34, 34);
+            padding: 25px;
+            border-radius: 28px;
+            box-shadow: 4px 8px 12px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        h1 {
+            color: aquamarine;
+            margin-bottom: 25px;
+        }
+        .search {
+            text-align: center;
+            margin: 30px 0 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        input, button {
+            padding: 9px;
+            margin: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(56, 55, 55);
+        }
+        .dashboard {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th, td {
+            border: 1px solid rgb(110, 104, 104);
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: black;
+            color: white;
+        }
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+        .fail {
+            color: red;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            display: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <h1>Student Result Dashboard</h1>
+
+    <div class="search">
+        <input type="text" id="studentId" placeholder="Enter Student ID">
+
+        <button onclick="searchStudent()">Search</button>
+
+        <p id="error" class="error">Student not found!</p>
+    </div>
+
+    <div id="student1" class="dashboard" style="display:none;">
+
+        <h2>Student Details</h2>
+
+        <p><b>Student ID:</b> 1</p>
+        <p><b>Name:</b> Uday</p>
+        <p><b>Course:</b> MCA</p>
+
+        <h2>Subject Marks</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Web Technology</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>Java Programming</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>72</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Data Structures</td>
+                <td>75</td>
+            </tr>
+        </table>
+
+        <h2>Performance Summary</h2>
+
+        <p><b>Total Marks:</b> 390 / 500</p>
+        <p><b>Percentage:</b> 78%</p>
+        <p><b>Grade:</b> B</p>
+        <p><b>Result:</b> <span class="pass">PASS</span></p>
+
+    </div>
+
+    <div id="student2" class="dashboard" style="display:none;">
+
+        <h2>Student Details</h2>
+
+        <p><b>Student ID:</b> 2</p>
+        <p><b>Name:</b> Kumar</p>
+        <p><b>Course:</b> MCA</p>
+
+        <h2>Subject Marks</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Web Technology</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>Java Programming</td>
+                <td>91</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>84</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Data Structures</td>
+                <td>86</td>
+            </tr>
+        </table>
+
+        <h2>Performance Summary</h2>
+
+        <p><b>Total Marks:</b> 439 / 500</p>
+        <p><b>Percentage:</b> 87.8%</p>
+        <p><b>Grade:</b> A</p>
+        <p><b>Result:</b> <span class="pass">PASS</span></p>
+
+    </div>
+
+
+    <div id="student3" class="dashboard" style="display:none;">
+
+        <h2>Student Details</h2>
+
+        <p><b>Student ID:</b> 3</p>
+        <p><b>Name:</b> Reddy</p>
+        <p><b>Course:</b> MCA</p>
+
+        <h2>Subject Marks</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Web Technology</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>Java Programming</td>
+                <td>52</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>48</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>Data Structures</td>
+                <td>50</td>
+            </tr>
+        </table>
+
+        <h2>Performance Summary</h2>
+
+        <p><b>Total Marks:</b> 250 / 500</p>
+        <p><b>Percentage:</b> 50%</p>
+        <p><b>Grade:</b> D</p>
+        <p><b>Result:</b> <span class="pass">PASS</span></p>
+
+    </div>
+
+
+    <div id="student4" class="dashboard" style="display:none;">
+
+        <h2>Student Details</h2>
+
+        <p><b>Student ID:</b> 4</p>
+        <p><b>Name:</b> Kasaram</p>
+        <p><b>Course:</b> MCA</p>
+
+        <h2>Subject Marks</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Web Technology</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Java Programming</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Data Structures</td>
+                <td>45</td>
+            </tr>
+        </table>
+
+        <h2>Performance Summary</h2>
+
+        <p><b>Total Marks:</b> 200 / 500</p>
+        <p><b>Percentage:</b> 40%</p>
+        <p><b>Grade:</b> F</p>
+        <p><b>Result:</b> <span class="fail">FAIL</span></p>
+
+    </div>
+
+</div>
+<script>
+
+function searchStudent() {
+
+    let id = document.getElementById("studentId").value;
+
+    document.getElementById("student1").style.display = "none";
+    document.getElementById("student2").style.display = "none";
+    document.getElementById("student3").style.display = "none";
+    document.getElementById("student4").style.display = "none";
+
+    document.getElementById("error").style.display = "none";
+
+    if (id == "1") {
+        document.getElementById("student1").style.display = "block";
+    }
+    else if (id == "2") {
+        document.getElementById("student2").style.display = "block";
+    }
+    else if (id == "3") {
+        document.getElementById("student3").style.display = "block";
+    }
+    else if (id == "4") {
+        document.getElementById("student4").style.display = "block";
+    }
+    else {
+        document.getElementById("error").style.display = "block";
+    }
+}
+
+</script>
+
+</body>
+</html>

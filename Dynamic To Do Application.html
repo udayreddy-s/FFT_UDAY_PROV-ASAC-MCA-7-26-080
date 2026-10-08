@@ -1,0 +1,308 @@
+<html>
+<head>
+    <title>To Do List</title>
+    <style>
+        body {
+            font-family:Calibri;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+
+        .box {
+            background-color: white;
+            width: 450px;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px gray;
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-box {
+            display: flex;
+            gap: 8px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        .filters {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #eeeeee;
+            margin: 8px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .delete {
+            background-color: red;
+        }
+
+        .edit {
+            background-color: green;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+        <h2>To-Do List</h2>
+        <div class="input-box">
+
+            <input type="text" id="taskInput"
+                   placeholder="Enter your task">
+
+            <button onclick="addTask()">Add Task</button>
+
+        </div>
+        <div class="filters">
+
+            <button onclick="showAll()">All</button>
+
+            <button onclick="showPending()">Pending</button>
+
+            <button onclick="showCompleted()">Completed</button>
+
+        </div>
+        <ul id="taskList"></ul>
+
+        <div class="footer">
+
+            <p id="taskCount">0 tasks pending</p>
+
+            <button onclick="clearCompleted()">
+                Clear Completed
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let tasks = [];
+
+        let savedTasks = localStorage.getItem("tasks");
+
+        if (savedTasks != null) {
+            tasks = JSON.parse(savedTasks);
+        }
+
+        displayTasks();
+
+        function addTask() {
+
+            let input = document.getElementById("taskInput");
+
+            let text = input.value;
+
+            if (text == "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            let task = {
+                name: text,
+                completed: false
+            };
+
+            tasks.push(task);
+
+            input.value = "";
+
+            saveTasks();
+
+            displayTasks();
+        }
+
+        function displayTasks() {
+
+            let list = document.getElementById("taskList");
+
+            list.innerHTML = "";
+
+            let pending = 0;
+
+            for (let i = 0; i < tasks.length; i++) {
+
+                if (tasks[i].completed == false) {
+                    pending++;
+                }
+
+                let item = document.createElement("li");
+
+                let text = document.createElement("span");
+
+                text.innerText = tasks[i].name;
+
+
+                if (tasks[i].completed == true) {
+                    text.className = "completed";
+                }
+                let checkbox = document.createElement("input");
+
+                checkbox.type = "checkbox";
+
+                checkbox.checked = tasks[i].completed;
+
+                checkbox.onclick = function() {
+
+                    tasks[i].completed =
+                        !tasks[i].completed;
+
+                    saveTasks();
+
+                    displayTasks();
+
+                };
+
+                let editButton = document.createElement("button");
+
+                editButton.innerText = "Edit";
+
+                editButton.className = "edit";
+
+                editButton.onclick = function() {
+
+                    let newTask = prompt(
+                        "Edit your task:",
+                        tasks[i].name
+                    );
+
+                    if (newTask != null && newTask != "") {
+
+                        tasks[i].name = newTask;
+
+                        saveTasks();
+
+                        displayTasks();
+                    }
+
+                };
+
+                let deleteButton = document.createElement("button");
+
+                deleteButton.innerText = "Delete";
+                deleteButton.className = "delete";
+                deleteButton.onclick = function() {
+
+                    tasks.splice(i, 1);
+
+                    saveTasks();
+
+                    displayTasks();
+
+                };
+
+                item.appendChild(checkbox);
+                item.appendChild(text);
+                item.appendChild(editButton);
+                item.appendChild(deleteButton);
+                list.appendChild(item);
+
+            }
+            document.getElementById("taskCount").innerText =
+                pending + " tasks pending";
+
+        }
+        function showAll() {
+
+            displayTasks();
+
+        }
+
+        function showPending() {
+
+            let list = document.getElementById("taskList");
+
+            list.innerHTML = "";
+
+            for (let i = 0; i < tasks.length; i++) {
+
+                if (tasks[i].completed == false) {
+                    let item = document.createElement("li");
+                    item.innerText = tasks[i].name;
+                    list.appendChild(item);
+                }
+            }
+        }
+        function showCompleted() {
+
+            let list = document.getElementById("taskList");
+            list.innerHTML = "";
+            for (let i = 0; i < tasks.length; i++) {
+
+                if (tasks[i].completed == true) {
+
+                    let item = document.createElement("li");
+
+                    item.className = "completed";
+
+                    item.innerText = tasks[i].name;
+
+                    list.appendChild(item);
+                }
+            }
+        }
+        function clearCompleted() {
+
+            let newTasks = [];
+
+            for (let i = 0; i < tasks.length; i++) {
+
+                if (tasks[i].completed == false) {
+
+                    newTasks.push(tasks[i]);
+                }
+            }
+            tasks = newTasks;
+            saveTasks();
+            displayTasks();
+        }
+        function saveTasks() {
+            localStorage.setItem(
+                "tasks",
+                JSON.stringify(tasks)
+            );
+        }
+    </script>
+</body>
+</html>
